@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Calculator</title>
+      <meta name="description" content="Calculator Web application">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+   </head>
+   <body ng-app="Calculator">
+      <div ng-controller="CalculatorController">
+         <md-content>
+         <h1>Calculator</h1>
+         <section layout="row" flex="20" layout-sm="column" layout-align="center center" layout-wrap>
+            <div class="md-item-text md-whiteframe-1dp" flex>
+               <h3>&nbsp;{{ calculator.currentDisplay }}</h3>
+            </div>
+         </section>
+         <section layout="row" flex="20" layout-sm="column" layout-align="center center" layout-wrap>
+            <md-button ng-click="digitOrPointClicked(1)" class="md-fab md-mini md-primary" aria-label="1">1</md-button>
+            <md-button ng-click="digitOrPointClicked(2)" class="md-fab md-mini md-primary" aria-label="2">2</md-button>
+            <md-button ng-click="digitOrPointClicked(3)" class="md-fab md-mini md-primary" aria-label="3">3</md-button>
+            <md-button ng-click="operationButtonClicked('+')" class="md-fab md-mini md-primary md-hue-2" aria-label="+">+</md-button>
+         </section>
+         <section layout="row" flex="20" layout-sm="column" layout-align="center center" layout-wrap>
+            <md-button ng-click="digitOrPointClicked(4)" class="md-fab md-mini md-primary" aria-label="4">4</md-button>
+            <md-button ng-click="digitOrPointClicked(5)" class="md-fab md-mini md-primary" aria-label="5">5</md-button>
+            <md-button ng-click="digitOrPointClicked(6)" class="md-fab md-mini md-primary" aria-label="6">6</md-button>
+            <md-button ng-click="operationButtonClicked('-')" class="md-fab md-mini md-primary md-hue-2" aria-label="-">-</md-button>
+         </section>
+         <section layout="row" flex="20" layout-sm="column" layout-align="center center" layout-wrap>
+            <md-button ng-click="digitOrPointClicked(7)" class="md-fab md-mini md-primary" aria-label="7">7</md-button>
+            <md-button ng-click="digitOrPointClicked(8)" class="md-fab md-mini md-primary" aria-label="8">8</md-button>
+            <md-button ng-click="digitOrPointClicked(9)" class="md-fab md-mini md-primary" aria-label="9">9</md-button>
+            <md-button ng-click="operationButtonClicked('*')" class="md-fab md-mini md-primary md-hue-2" aria-label="*">*</md-button>
+         </section>
+         <section layout="row" flex="20" layout-sm="column" layout-align="center center" layout-wrap>
+            <md-button ng-click="digitOrPointClicked(0)" class="md-fab md-mini md-primary" aria-label="0">0</md-button>
+            <md-button ng-click="digitOrPointClicked('.')" class="md-fab md-mini md-primary" aria-label=".">.</md-button>
+            <md-button ng-click="operationButtonClicked('/')" class="md-fab md-mini md-primary md-hue-2" aria-label="/">/</md-button>
+         </section>
+         <section layout="row" flex="20" layout-sm="column" layout-align="center center" layout-wrap>
+            <md-button ng-click="answerClicked()" class="md-raised md-mini md-primary" aria-label="Answer">Answer</md-button>
+         </section>
+         <md-content>
+      </div>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-aria/angular-aria.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.js"></script>
+      <script src="bower_components/angular-messages/angular-messages.js"></script>
+      <script src="bower_components/angular-material/angular-material.js"></script>
+      <script src="app.js"></script>
+      <script src="CalculatorService.js"></script>
+      <script src="CalculatorController.js"></script>
+   </body>
+</html>
